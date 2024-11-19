@@ -4,10 +4,10 @@ dotenv.config();
 
 const app = require("./app");
 
-const port = 8000;
+const PORT = 8000;
 
-app.listen(port, () => {
-  console.log(`Server is running on ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on ${PORT}`);
 });
 
 exports.api = functions.https.onRequest(app);
