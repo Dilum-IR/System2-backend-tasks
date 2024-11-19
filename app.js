@@ -1,11 +1,15 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
+const helmet = require("helmet");
 const fs = require("fs");
 
 const authRouter = require("./Routes/AuthRoutes");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+app.use(helmet());
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
