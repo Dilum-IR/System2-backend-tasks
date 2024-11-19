@@ -4,7 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const fs = require("fs");
 
-const authRouter = require("./Routes/AuthRoutes");
+const authRouter = require("./Routes/authRoutes");
 
 const app = express();
 app.use(express.json());
